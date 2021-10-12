@@ -2,9 +2,6 @@ import React from 'react';
 import './App.css';
 import Form from './components/Form';
 
-<<<<<<< Updated upstream
-function App() {
-=======
 interface IPost {
   id: number;
   title: string;
@@ -71,7 +68,6 @@ const App = () => {
     console.log("Estimate (not yet) saved! (but it's supposed to when this function is done :))");
   }
 
->>>>>>> Stashed changes
   return (
     <div className="App">
       <h1>Hello world</h1>
