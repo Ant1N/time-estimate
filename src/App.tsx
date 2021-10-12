@@ -1,6 +1,7 @@
 import React from 'react';
 import axios, { CancelTokenSource } from 'axios';
 import Form from './components/Form';
+import IssuesList from './components/IssuesList';
 
 interface IPost {
   id: number;
@@ -65,16 +66,18 @@ const App = () => {
   return (
     <div className="App">
             {loading && <button onClick={handleCancelClick}>Cancel</button>}
-      <ul className="posts">
+      {/* <ul className="posts">
         {posts.map((post) => (
           <li key={post.id}>
             <h3>{post.title}</h3>
           </li>
         ))}
-      </ul>
+      </ul> */}
       {error && <p className="error">{error}</p>}
-      <h1>Hello world</h1>
-      <Form />
+      <div className="grid">
+          <Form />
+          <IssuesList posts={posts}/> 
+      </div>
     </div>
 );
 }
