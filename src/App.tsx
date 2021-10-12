@@ -70,9 +70,17 @@ const App = () => {
 
   return (
     <div className="App">
+            {loading && <button onClick={handleCancelClick}>Cancel</button>}
+      <ul className="posts">
+        {posts.map((post) => (
+          <li key={post.id}>
+            <h3>{post.title}</h3>
+          </li>
+        ))}
+      </ul>
+      {error && <p className="error">{error}</p>}
       <h1>Hello world</h1>
-      <Form estimate={1} handleSaveEstimate={handleSaveEstimate} />
-    </div>
+      <Form estimate={1} handleSaveEstimate={handleSaveEstimate} />    </div>
 );
 }
 
