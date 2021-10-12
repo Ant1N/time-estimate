@@ -62,6 +62,12 @@ const App = () => {
       });
   }, []);
 
+  // Function to handle when new estimated is saved (after button click)
+
+  function handleSaveEstimate() {
+    console.log("Estimate (not yet) saved! (but it's supposed to when this function is done :))");
+  }
+
   return (
     <div className="App">
             {loading && <button onClick={handleCancelClick}>Cancel</button>}
@@ -74,7 +80,7 @@ const App = () => {
       </ul>
       {error && <p className="error">{error}</p>}
       <h1>Hello world</h1>
-      <Form />
+      <Form estimate={1} handleSaveEstimate={handleSaveEstimate} />    
     </div>
 );
 }
