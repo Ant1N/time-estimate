@@ -80,7 +80,8 @@ const App = () => {
       </ul>
       {error && <p className="error">{error}</p>}
       <h1>Hello world</h1>
-      <Form estimate={1} handleSaveEstimate={handleSaveEstimate} />    </div>
+      <Form estimate={1} handleSaveEstimate={handleSaveEstimate} />    
+    </div>
 );
 }
 
