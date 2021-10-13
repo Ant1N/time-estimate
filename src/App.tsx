@@ -63,19 +63,25 @@ const App = () => {
       });
   }, []);
 
+  // Function to handle when new estimated is saved (after button click)
+
+  function handleSaveEstimate() {
+    console.log("Estimate (not yet) saved! (but it's supposed to when this function is done :))");
+  }
+
   return (
     <div className="App">
             {loading && <button onClick={handleCancelClick}>Cancel</button>}
-      <ul className="posts">
+      {/* <ul className="posts">
         {posts.map((post) => (
           <li key={post.id}>
             <h3>{post.title}</h3>
           </li>
         ))}
-      </ul> 
+      </ul>  */}
       {error && <p className="error">{error}</p>}
       <div className="grid">
-          <Form />
+      <Form estimate={1} handleSaveEstimate={handleSaveEstimate} />
           <IssuesList posts={posts}/> 
       </div>
     </div>
